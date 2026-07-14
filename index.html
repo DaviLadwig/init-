@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Init Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="header-shell">
+
+            <a href="#inicio" class="header-brand" aria-label="Init Sistemas - Início">
+                <img src="images/logo.png" alt="Init Sistemas" class="header-brand__logo">
+            </a>
+
+            <nav class="floating-nav" id="floatingNav" aria-label="Navegação principal">
+                <span class="floating-nav__indicator" id="navIndicator"></span>
+
+                <a href="#inicio" class="floating-nav__link active">
+                    Início
+                </a>
+
+                <a href="#solucoes" class="floating-nav__link">
+                    Soluções
+                </a>
+
+                <a href="#projetos" class="floating-nav__link">
+                    Projetos
+                </a>
+
+                <a href="#sobre" class="floating-nav__link">
+                    Sobre
+                </a>
+
+                <a href="#contato" class="floating-nav__link">
+                    Contato
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contato" class="header-contact">
+                    <span class="header-contact__text">Solicitar projeto</span>
+
+                    <span class="header-contact__icon" aria-hidden="true">
+                        ↗
+                    </span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação mobile">
+            <div class="mobile-menu__inner">
+
+                <span class="mobile-menu__eyebrow">
+                    Navegação
+                </span>
+
+                <a href="#inicio" class="mobile-menu__link">
+                    <span>01</span>
+                    Início
+                </a>
+
+                <a href="#solucoes" class="mobile-menu__link">
+                    <span>02</span>
+                    Soluções
+                </a>
+
+                <a href="#projetos" class="mobile-menu__link">
+                    <span>03</span>
+                    Projetos
+                </a>
+
+                <a href="#sobre" class="mobile-menu__link">
+                    <span>04</span>
+                    Sobre
+                </a>
+
+                <a href="#contato" class="mobile-menu__link">
+                    <span>05</span>
+                    Contato
+                </a>
+
+                <a href="#contato" class="mobile-menu__contact">
+                    Solicitar um projeto
+                    <span>↗</span>
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!--SECTION HERO-->
+    <section class="hero-minimal" id="inicio">
+        <div class="hero-minimal__background" aria-hidden="true">
+            <div class="hero-minimal__grid"></div>
+            <div class="hero-minimal__glow"></div>
+            <div class="hero-minimal__line hero-minimal__line--one"></div>
+            <div class="hero-minimal__line hero-minimal__line--two"></div>
+        </div>
+
+        <div class="hero-minimal__container">
+            <div class="hero-minimal__content">
+                <div class="hero-minimal__eyebrow hero-enter hero-enter--1">
+                    <span class="hero-minimal__status"></span>
+                    Desenvolvimento de sistemas personalizados
+                </div>
+
+                <h1 class="hero-minimal__title hero-enter hero-enter--2">
+                    Sistemas que simplificam
+                    <span>processos e impulsionam negócios.</span>
+                </h1>
+
+                <p class="hero-minimal__description hero-enter hero-enter--3">
+                    Criamos plataformas web, sistemas de gestão e soluções digitais
+                    desenvolvidas de acordo com a realidade da sua empresa.
+                </p>
+
+                <div class="hero-minimal__actions hero-enter hero-enter--4">
+                    <a href="#projetos" class="hero-minimal__button hero-minimal__button--primary">
+                        Conhecer projetos
+
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="#contato" class="hero-minimal__button hero-minimal__button--secondary">
+                        Falar com a Init
+                    </a>
+                </div>
+
+                <div class="hero-minimal__details hero-enter hero-enter--5">
+                    <div class="hero-minimal__detail">
+                        <strong>Web</strong>
+                        <span>Sistemas responsivos</span>
+                    </div>
+
+                    <div class="hero-minimal__detail">
+                        <strong>Gestão</strong>
+                        <span>Processos centralizados</span>
+                    </div>
+
+                    <div class="hero-minimal__detail">
+                        <strong>Evolução</strong>
+                        <span>Suporte contínuo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-minimal__visual hero-enter hero-enter--visual">
+                <div class="hero-minimal__visual-border"></div>
+
+                <div class="hero-minimal__visual-header">
+                    <div class="hero-minimal__visual-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span class="hero-minimal__visual-label">
+                        init.systems / interface
+                    </span>
+
+                    <span class="hero-minimal__visual-online">
+                        <i></i>
+                        Online
+                    </span>
+                </div>
+
+                <div class="hero-minimal__image-area">
+                    <div class="hero-minimal__image-glow"></div>
+
+                    <img src="images/hero-image.png" alt="Interface de sistema desenvolvido pela Init Sistemas"
+                        class="hero-minimal__image">
+
+                    <div class="hero-minimal__scan"></div>
+                </div>
+
+                <div class="hero-minimal__floating hero-minimal__floating--top">
+                    <span class="hero-minimal__floating-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+
+                    <div>
+                        <strong>Solução personalizada</strong>
+                        <span>Desenvolvida para o seu negócio</span>
+                    </div>
+                </div>
+
+                <div class="hero-minimal__floating hero-minimal__floating--bottom">
+                    <span class="hero-minimal__floating-chart">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+
+                    <div>
+                        <strong>Dados centralizados</strong>
+                        <span>Mais controle para sua operação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-minimal__footer">
+            <span>Explore nossos projetos</span>
+
+            <a href="#solucoes" aria-label="Ir para a próxima seção">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="1.6"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!--SECTION SOLUÇÕES-->
+    <section class="solutions-slider" id="solucoes">
+        <div class="solutions-slider__container">
+
+            <header class="solutions-slider__header">
+                <div class="solutions-slider__heading reveal reveal-up">
+                    <div class="solutions-slider__eyebrow">
+                        <span></span>
+                        Nossas soluções
+                    </div>
+
+                    <h2>
+                        Tecnologia para simplificar
+                        <span>a sua operação.</span>
+                    </h2>
+                </div>
+
+                <div class="solutions-slider__controls reveal reveal-up reveal-delay-1">
+                    <button type="button" class="solutions-slider__button" id="solutionsPrev"
+                        aria-label="Solução anterior">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <button type="button" class="solutions-slider__button" id="solutionsNext"
+                        aria-label="Próxima solução">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="solutions-slider__track reveal reveal-up reveal-delay-2" id="solutionsTrack" tabindex="0"
+                aria-label="Soluções oferecidas pela Init Sistemas">
+                <article class="solution-card">
+                    <div class="solution-card__top">
+                        <span class="solution-card__number">01</span>
+
+                        <span class="solution-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor"
+                                    stroke-width="1.6" />
+
+                                <path d="M3 9H21" stroke="currentColor" stroke-width="1.6" />
+
+                                <path d="M7 6.5H7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="solution-card__content">
+                        <span class="solution-card__category">
+                            Desenvolvimento
+                        </span>
+
+                        <h3>Sistemas personalizados</h3>
+
+                        <p>
+                            Plataformas desenvolvidas conforme os processos,
+                            usuários e necessidades específicas da sua empresa.
+                        </p>
+                    </div>
+
+                    <div class="solution-card__footer">
+                        <span>Projetos sob medida</span>
+                        <span class="solution-card__arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-card__top">
+                        <span class="solution-card__number">02</span>
+
+                        <span class="solution-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 7H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+
+                                <path d="M4 12H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+
+                                <path d="M4 17H10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+
+                                <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="solution-card__content">
+                        <span class="solution-card__category">
+                            Organização
+                        </span>
+
+                        <h3>Sistemas de gestão</h3>
+
+                        <p>
+                            Centralize cadastros, usuários, atendimentos,
+                            pedidos e operações em um único ambiente.
+                        </p>
+                    </div>
+
+                    <div class="solution-card__footer">
+                        <span>Mais controle</span>
+                        <span class="solution-card__arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-card__top">
+                        <span class="solution-card__number">03</span>
+
+                        <span class="solution-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 19V11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+
+                                <path d="M10 19V5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+
+                                <path d="M15 19V9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+
+                                <path d="M20 19V3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="solution-card__content">
+                        <span class="solution-card__category">
+                            Dados
+                        </span>
+
+                        <h3>Dashboards e indicadores</h3>
+
+                        <p>
+                            Visualize dados, metas e resultados em painéis
+                            claros para apoiar decisões mais rápidas.
+                        </p>
+                    </div>
+
+                    <div class="solution-card__footer">
+                        <span>Visão estratégica</span>
+                        <span class="solution-card__arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-card__top">
+                        <span class="solution-card__number">04</span>
+
+                        <span class="solution-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.6" />
+
+                                <circle cx="18" cy="6" r="3" stroke="currentColor" stroke-width="1.6" />
+
+                                <circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.6" />
+
+                                <path d="M9 11L15 7.5" stroke="currentColor" stroke-width="1.6" />
+
+                                <path d="M9 13L15 16.5" stroke="currentColor" stroke-width="1.6" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="solution-card__content">
+                        <span class="solution-card__category">
+                            Conectividade
+                        </span>
+
+                        <h3>Integrações com APIs</h3>
+
+                        <p>
+                            Conecte sistemas, setores e serviços externos
+                            para reduzir tarefas manuais e dados duplicados.
+                        </p>
+                    </div>
+
+                    <div class="solution-card__footer">
+                        <span>Operação conectada</span>
+                        <span class="solution-card__arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="solution-card">
+                    <div class="solution-card__top">
+                        <span class="solution-card__number">05</span>
+
+                        <span class="solution-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3A9 9 0 1 0 21 12" stroke="currentColor" stroke-width="1.6"
+                                    stroke-linecap="round" />
+
+                                <path d="M16 3H21V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+
+                                <path d="M21 3L16 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="solution-card__content">
+                        <span class="solution-card__category">
+                            Evolução
+                        </span>
+
+                        <h3>Manutenção e suporte</h3>
+
+                        <p>
+                            Correções, melhorias e novas funcionalidades
+                            para manter o sistema seguro e atualizado.
+                        </p>
+                    </div>
+
+                    <div class="solution-card__footer">
+                        <span>Evolução contínua</span>
+                        <span class="solution-card__arrow">↗</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="solutions-slider__bottom reveal reveal-up reveal-delay-3">
+                <p>
+                    Arraste para explorar
+                    <span>→</span>
+                </p>
+
+                <div class="solutions-slider__progress">
+                    <span id="solutionsProgress"></span>
+                </div>
+
+                <div class="solutions-slider__counter">
+                    <strong id="solutionsCurrent">01</strong>
+                    <span>/</span>
+                    <span id="solutionsTotal">05</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION PROJETOS-->
+    <!-- DEMONSTRAÇÕES DE SISTEMAS -->
+    <section class="system-demos" id="projetos">
+        <div class="system-demos__background" aria-hidden="true">
+            <span class="system-demos__glow"></span>
+            <span class="system-demos__line"></span>
+        </div>
+
+        <div class="system-demos__container">
+
+            <!-- CABEÇALHO -->
+            <header class="system-demos__header">
+                <div class="system-demos__heading reveal reveal-up">
+                    <div class="system-demos__eyebrow">
+                        <span></span>
+                        Demonstrações de sistemas
+                    </div>
+
+                    <h2>
+                        Interfaces criadas para
+                        <span>diferentes operações.</span>
+                    </h2>
+                </div>
+
+                <div class="system-demos__introduction reveal reveal-up reveal-delay-1">
+                    <p>
+                        Explore exemplos de sistemas, plataformas e dashboards
+                        desenvolvidos pela Init Sistemas para demonstrar recursos,
+                        experiências e possibilidades de personalização.
+                    </p>
+
+                    <a href="./demonstracoes/index.html" class="system-demos__view-all">
+                        Ver todas as demonstrações
+
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- GRID DE DEMONSTRAÇÕES -->
+            <div class="system-demos__grid">
+
+                <!-- DEMONSTRAÇÃO PRINCIPAL -->
+                <a href="./demonstracoes/gestao-municipal.html" class="demo-featured reveal reveal-up"
+                    aria-label="Ver demonstração de sistema de gestão municipal">
+                    <div class="demo-featured__content">
+                        <div class="demo-featured__top">
+                            <span class="demo-featured__number">
+                                01
+                            </span>
+
+                            <span class="demo-featured__status">
+                                <i></i>
+                                Demonstração
+                            </span>
+                        </div>
+
+                        <div class="demo-featured__information">
+                            <span class="demo-featured__category">
+                                Saúde · Gestão municipal · Logística
+                            </span>
+
+                            <h3>
+                                Sistema de gestão municipal
+                            </h3>
+
+                            <p>
+                                Demonstração de uma plataforma para organizar
+                                pacientes, unidades de saúde, equipes de campo,
+                                mapas e operações recorrentes.
+                            </p>
+                        </div>
+
+                        <div class="demo-featured__resources">
+                            <div>
+                                <strong>Administração</strong>
+                                <span>Painel central de gestão</span>
+                            </div>
+
+                            <div>
+                                <strong>Aplicações móveis</strong>
+                                <span>Módulos para equipes de campo</span>
+                            </div>
+
+                            <div>
+                                <strong>Geolocalização</strong>
+                                <span>Pontos, áreas e rotas</span>
+                            </div>
+                        </div>
+
+                        <span class="demo-featured__action">
+                            Visualizar demonstração
+
+                            <span aria-hidden="true">↗</span>
+                        </span>
+                    </div>
+
+                    <div class="demo-featured__visual">
+                        <div class="demo-featured__visual-grid"></div>
+                        <div class="demo-featured__visual-glow"></div>
+
+                        <div class="demo-browser">
+                            <div class="demo-browser__header">
+                                <div class="demo-browser__dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <span class="demo-browser__address">
+                                    init.systems / demo-municipal
+                                </span>
+
+                                <span class="demo-browser__status">
+                                    <i></i>
+                                    Interface demonstrativa
+                                </span>
+                            </div>
+
+                            <div class="demo-browser__screen">
+                                <img src="./assets/img/demonstracoes/gestao-municipal.png"
+                                    alt="Captura de tela de um sistema de gestão municipal" loading="lazy"
+                                    decoding="async">
+                            </div>
+                        </div>
+
+                        <div class="demo-featured__floating demo-featured__floating--top">
+                            <span class="demo-featured__floating-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 21C12 21 19 17 19 10.5C19 6.36 15.87 3 12 3C8.13 3 5 6.36 5 10.5C5 17 12 21 12 21Z"
+                                        stroke="currentColor" stroke-width="1.7" />
+
+                                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7" />
+                                </svg>
+                            </span>
+
+                            <div>
+                                <strong>Gestão geográfica</strong>
+                                <span>Informações e rotas no mapa</span>
+                            </div>
+                        </div>
+
+                        <div class="demo-featured__floating demo-featured__floating--bottom">
+                            <span class="demo-featured__floating-value">
+                                03
+                            </span>
+
+                            <div>
+                                <strong>Perfis de acesso</strong>
+                                <span>Administração e equipes externas</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- DEMONSTRAÇÃO 02 -->
+                <a href="./demonstracoes/crm-locacao.html" class="demo-card reveal reveal-up reveal-delay-1"
+                    aria-label="Ver demonstração de CRM para empresas de locação">
+                    <div class="demo-card__visual demo-card__visual--dark">
+                        <div class="demo-card__browser">
+                            <div class="demo-card__browser-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="demo-card__image">
+                                <img src="./assets/img/demonstracoes/crm-locacao.png"
+                                    alt="Captura de tela de um CRM para empresas de locação" loading="lazy"
+                                    decoding="async">
+                            </div>
+                        </div>
+
+                        <span class="demo-card__number">
+                            02
+                        </span>
+
+                        <span class="demo-card__open">
+                            ↗
+                        </span>
+                    </div>
+
+                    <div class="demo-card__content">
+                        <div class="demo-card__category">
+                            Demonstração · CRM · Gestão
+                        </div>
+
+                        <h3>
+                            CRM para empresas de locação
+                        </h3>
+
+                        <p>
+                            Interface para controle de clientes, equipamentos,
+                            contratos, retiradas, devoluções e informações financeiras.
+                        </p>
+
+                        <div class="demo-card__tags">
+                            <span>Clientes</span>
+                            <span>Equipamentos</span>
+                            <span>Contratos</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- DEMONSTRAÇÃO 03 -->
+                <a href="./demonstracoes/dashboard-hospitalar.html" class="demo-card reveal reveal-up reveal-delay-2"
+                    aria-label="Ver demonstração de dashboard hospitalar">
+                    <div class="demo-card__visual demo-card__visual--blue">
+                        <div class="demo-card__browser">
+                            <div class="demo-card__browser-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="demo-card__image">
+                                <img src="./assets/img/demonstracoes/dashboard-hospitalar.png"
+                                    alt="Captura de tela de um dashboard hospitalar" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+
+                        <span class="demo-card__number">
+                            03
+                        </span>
+
+                        <span class="demo-card__open">
+                            ↗
+                        </span>
+                    </div>
+
+                    <div class="demo-card__content">
+                        <div class="demo-card__category">
+                            Demonstração · Saúde · Indicadores
+                        </div>
+
+                        <h3>
+                            Dashboard hospitalar
+                        </h3>
+
+                        <p>
+                            Painel para acompanhamento de indicadores,
+                            desempenho de setores e informações operacionais.
+                        </p>
+
+                        <div class="demo-card__tags">
+                            <span>Indicadores</span>
+                            <span>Gráficos</span>
+                            <span>Monitoramento</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- RODAPÉ DA SEÇÃO -->
+            <div class="system-demos__footer reveal reveal-up">
+                <div>
+                    <span class="system-demos__footer-label">
+                        Soluções personalizáveis
+                    </span>
+
+                    <strong>
+                        Cada interface pode ser adaptada à sua operação.
+                    </strong>
+                </div>
+
+                <a href="#contato" class="system-demos__contact">
+                    Solicitar um sistema
+
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--SECTION SOBRE-->
+    <section class="about-section" id="sobre">
+        <div class="about-section__container">
+
+            <header class="about-section__header">
+                <div class="about-section__eyebrow reveal reveal-up">
+                    <span></span>
+                    Sobre a Init
+                </div>
+
+                <div class="about-section__heading">
+                    <h2 class="reveal reveal-up reveal-delay-1">
+                        Tecnologia pensada para
+                        <span>resolver problemas reais.</span>
+                    </h2>
+
+                    <p class="reveal reveal-up reveal-delay-2">
+                        Desenvolvemos sistemas que organizam processos,
+                        facilitam rotinas e oferecem mais controle para
+                        empresas e instituições.
+                    </p>
+                </div>
+            </header>
+
+            <div class="about-section__content">
+
+                <div class="about-section__information">
+                    <div class="about-section__text reveal reveal-left">
+                        <span class="about-section__label">
+                            Nossa proposta
+                        </span>
+
+                        <p>
+                            A Init Sistemas nasceu com o propósito de transformar
+                            necessidades operacionais em soluções digitais claras,
+                            modernas e fáceis de utilizar.
+                        </p>
+
+                        <p>
+                            Cada sistema é desenvolvido considerando a realidade
+                            da organização, os usuários envolvidos e os processos
+                            que precisam ser simplificados.
+                        </p>
+                    </div>
+
+                    <div class="about-section__principles">
+
+                        <article class="about-principle reveal reveal-up">
+                            <span class="about-principle__number">
+                                01
+                            </span>
+
+                            <div>
+                                <h3>Entender antes de desenvolver</h3>
+
+                                <p>
+                                    Analisamos a operação, os usuários e as regras
+                                    do negócio antes de definir a solução.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="about-principle reveal reveal-up reveal-delay-1">
+                            <span class="about-principle__number">
+                                02
+                            </span>
+
+                            <div>
+                                <h3>Simplicidade na utilização</h3>
+
+                                <p>
+                                    Criamos interfaces claras para que o sistema
+                                    realmente facilite o trabalho diário.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="about-principle reveal reveal-up reveal-delay-2">
+                            <span class="about-principle__number">
+                                03
+                            </span>
+
+                            <div>
+                                <h3>Evolução contínua</h3>
+
+                                <p>
+                                    Estruturamos projetos preparados para receber
+                                    melhorias e acompanhar novas necessidades.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="about-section__visual reveal reveal-right reveal-delay-1">
+                    <div class="about-visual">
+
+                        <div class="about-visual__grid" aria-hidden="true"></div>
+                        <div class="about-visual__glow" aria-hidden="true"></div>
+
+                        <div class="about-visual__header">
+                            <div class="about-visual__brand">
+                                <span class="about-visual__brand-symbol">
+                                    in
+                                </span>
+
+                                <div>
+                                    <strong>Init Sistemas</strong>
+                                    <span>Desenvolvimento de soluções digitais</span>
+                                </div>
+                            </div>
+
+                            <span class="about-visual__status">
+                                <i></i>
+                                Em evolução
+                            </span>
+                        </div>
+
+                        <div class="about-visual__center">
+                            <span class="about-visual__code">
+                                &lt;init&gt;
+                            </span>
+
+                            <h3>
+                                Ideias transformadas
+                                <span>em soluções.</span>
+                            </h3>
+
+                            <p>
+                                Planejamento, design e desenvolvimento conectados
+                                em cada etapa do projeto.
+                            </p>
+                        </div>
+
+                        <div class="about-visual__metrics">
+
+                            <div class="about-visual__metric">
+                                <span>01</span>
+
+                                <div>
+                                    <strong>Planejamento</strong>
+                                    <small>Entender o desafio</small>
+                                </div>
+                            </div>
+
+                            <div class="about-visual__metric">
+                                <span>02</span>
+
+                                <div>
+                                    <strong>Desenvolvimento</strong>
+                                    <small>Construir a solução</small>
+                                </div>
+                            </div>
+
+                            <div class="about-visual__metric">
+                                <span>03</span>
+
+                                <div>
+                                    <strong>Evolução</strong>
+                                    <small>Melhorar continuamente</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="about-visual__line" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-section__footer reveal reveal-up">
+                <div class="about-section__footer-text">
+                    <span>
+                        Desenvolvimento próximo e personalizado
+                    </span>
+
+                    <strong>
+                        Do planejamento à implantação.
+                    </strong>
+                </div>
+
+                <a href="#contato" class="about-section__button">
+                    Conhecer a Init
+
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--SECTION PROCESSO-->
+    <section class="process-section" id="processo">
+        <div class="process-section__background" aria-hidden="true">
+            <span class="process-section__glow"></span>
+            <span class="process-section__grid"></span>
+        </div>
+
+        <div class="process-section__container">
+
+            <header class="process-section__header">
+                <div class="process-section__heading reveal reveal-up">
+                    <div class="process-section__eyebrow">
+                        <span></span>
+                        Como trabalhamos
+                    </div>
+
+                    <h2>
+                        Do primeiro entendimento
+                        <span>à evolução do sistema.</span>
+                    </h2>
+                </div>
+
+                <p class="process-section__description reveal reveal-up reveal-delay-1">
+                    Cada projeto é desenvolvido em etapas claras, permitindo
+                    acompanhar decisões, validar funcionalidades e evoluir a
+                    solução com mais segurança.
+                </p>
+            </header>
+
+            <div class="process-timeline reveal reveal-up reveal-delay-2">
+
+                <div class="process-timeline__line" aria-hidden="true">
+                    <span></span>
+                </div>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>01</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Descoberta
+                        </span>
+
+                        <h3>Entendimento da necessidade</h3>
+
+                        <p>
+                            Conhecemos a operação, os usuários, os problemas
+                            atuais e os resultados esperados.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>02</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Planejamento
+                        </span>
+
+                        <h3>Definição da solução</h3>
+
+                        <p>
+                            Organizamos funcionalidades, fluxos, prioridades
+                            e regras que farão parte do projeto.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>03</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Interface
+                        </span>
+
+                        <h3>Design e experiência</h3>
+
+                        <p>
+                            Estruturamos telas modernas, responsivas e fáceis
+                            de utilizar no cotidiano.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>04</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Construção
+                        </span>
+
+                        <h3>Desenvolvimento do sistema</h3>
+
+                        <p>
+                            Implementamos banco de dados, regras de negócio,
+                            permissões e funcionalidades.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>05</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Validação
+                        </span>
+
+                        <h3>Testes e implantação</h3>
+
+                        <p>
+                            Validamos o funcionamento, corrigimos detalhes
+                            e preparamos o sistema para utilização.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step__marker">
+                        <span>06</span>
+                    </div>
+
+                    <div class="process-step__content">
+                        <span class="process-step__category">
+                            Continuidade
+                        </span>
+
+                        <h3>Suporte e evolução</h3>
+
+                        <p>
+                            Acompanhamos o projeto com melhorias, novas
+                            funcionalidades e manutenção contínua.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="process-section__footer reveal reveal-up">
+                <div class="process-section__footer-status">
+                    <span class="process-section__footer-dot"></span>
+
+                    <div>
+                        <strong>Processo transparente</strong>
+                        <small>
+                            O cliente acompanha as principais etapas do projeto.
+                        </small>
+                    </div>
+                </div>
+
+                <a href="#contato" class="process-section__button">
+                    Iniciar um projeto
+
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--CONTATO-->
+    <section class="final-cta" id="contato">
+        <div class="final-cta__container">
+            <div class="final-cta__card reveal reveal-up">
+
+                <div class="final-cta__background" aria-hidden="true">
+                    <span class="final-cta__grid"></span>
+                    <span class="final-cta__glow final-cta__glow--one"></span>
+                    <span class="final-cta__glow final-cta__glow--two"></span>
+                    <span class="final-cta__line"></span>
+                </div>
+
+                <div class="final-cta__top">
+                    <div class="final-cta__eyebrow">
+                        <span class="final-cta__eyebrow-dot"></span>
+                        Disponível para novos projetos
+                    </div>
+
+                    <span class="final-cta__code">
+                        init.systems / contact
+                    </span>
+                </div>
+
+                <div class="final-cta__content">
+                    <div class="final-cta__text">
+                        <h2>
+                            Tem uma ideia que precisa
+                            <span>se transformar em sistema?</span>
+                        </h2>
+
+                        <p>
+                            Vamos entender sua necessidade e planejar uma solução
+                            personalizada para os processos da sua empresa.
+                        </p>
+                    </div>
+
+                    <a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener noreferrer"
+                        class="final-cta__button">
+                        <span class="final-cta__button-text">
+                            Conversar sobre um projeto
+                        </span>
+
+                        <span class="final-cta__button-icon" aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                </div>
+
+                <div class="final-cta__footer">
+                    <div class="final-cta__item">
+                        <span class="final-cta__item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+
+                        <span>Sistemas personalizados</span>
+                    </div>
+
+                    <div class="final-cta__item">
+                        <span class="final-cta__item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+
+                        <span>Planejamento de projeto</span>
+                    </div>
+
+                    <div class="final-cta__item">
+                        <span class="final-cta__item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+
+                        <span>Suporte e evolução</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="site-footer" id="footer">
+        <div class="site-footer__background" aria-hidden="true">
+            <span class="site-footer__grid"></span>
+            <span class="site-footer__glow"></span>
+            <span class="site-footer__line"></span>
+        </div>
+
+        <div class="site-footer__container">
+
+            <div class="site-footer__top">
+
+                <div class="site-footer__brand reveal reveal-up">
+                    <a href="#inicio" class="site-footer__logo" aria-label="Init Sistemas - Voltar ao início">
+                        <img src="images/logo.png" alt="Init Sistemas">
+                    </a>
+
+                    <p>
+                        Desenvolvimento de sistemas personalizados, plataformas
+                        de gestão e soluções digitais para empresas e instituições.
+                    </p>
+
+                    <div class="site-footer__availability">
+                        <span class="site-footer__availability-dot"></span>
+
+                        <div>
+                            <strong>Disponível para novos projetos</strong>
+                            <span>
+                                Desenvolvimento web e soluções personalizadas.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="site-footer__columns">
+
+                    <div class="site-footer__column reveal reveal-up reveal-delay-1">
+                        <span class="site-footer__column-title">
+                            Navegação
+                        </span>
+
+                        <nav aria-label="Navegação do rodapé">
+                            <a href="#inicio">Início</a>
+                            <a href="#solucoes">Soluções</a>
+                            <a href="#projetos">Projetos</a>
+                            <a href="#sobre">Sobre</a>
+                            <a href="#processo">Processo</a>
+                            <a href="#contato">Contato</a>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__column reveal reveal-up reveal-delay-2">
+                        <span class="site-footer__column-title">
+                            Projetos
+                        </span>
+
+                        <nav aria-label="Projetos da Init Sistemas">
+                            <a href="./projetos/sistema-remedio-em-casa.html">
+                                Sistema Remédio em Casa
+                            </a>
+
+                            <a href="./projetos/locapro-crm.html">
+                                LocaPro CRM
+                            </a>
+
+                            <a href="./projetos/dashboard-hospitalar.html">
+                                Dashboard hospitalar
+                            </a>
+
+                            <a href="./projetos.html">
+                                Ver todos os projetos
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__column reveal reveal-up reveal-delay-3">
+                        <span class="site-footer__column-title">
+                            Contato
+                        </span>
+
+                        <nav aria-label="Contato da Init Sistemas">
+                            <a href="mailto:contato@initsistemas.com">
+                                contato@initsistemas.com
+                            </a>
+
+                            <a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener noreferrer">
+                                WhatsApp
+                            </a>
+
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                Instagram
+                            </a>
+
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="site-footer__divider reveal reveal-up">
+                <span></span>
+            </div>
+
+            <div class="site-footer__bottom reveal reveal-up">
+
+                <div class="site-footer__copyright">
+                    <span>
+                        © <span id="footerYear"></span> Init Sistemas.
+                    </span>
+
+                    <span>
+                        Todos os direitos reservados.
+                    </span>
+                </div>
+
+                <div class="site-footer__legal">
+                    <a href="./politica-de-privacidade.html">
+                        Política de privacidade
+                    </a>
+
+                    <a href="./termos-de-uso.html">
+                        Termos de uso
+                    </a>
+                </div>
+
+                <a href="#inicio" class="site-footer__back-top" aria-label="Voltar ao topo">
+                    <span>Voltar ao topo</span>
+
+                    <i aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </i>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/solucoes.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

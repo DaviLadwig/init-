@@ -1,0 +1,550 @@
+/* =====================================================
+   SOLUTIONS SLIDER
+===================================================== */
+
+.solutions-slider {
+    position: relative;
+    padding: 105px 0 110px;
+    background:
+        linear-gradient(180deg,
+            #050606 0%,
+            #080909 100%);
+
+    overflow: hidden;
+}
+
+.solutions-slider::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    right: -180px;
+
+    width: 520px;
+    height: 520px;
+
+    background: rgba(47, 125, 255, 0.08);
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.solutions-slider__container {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.solutions-slider__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 0 28px;
+    margin-bottom: 42px;
+}
+
+.solutions-slider__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #747a82;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.solutions-slider__eyebrow span {
+    width: 7px;
+    height: 7px;
+
+    background: #2f7dff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(47, 125, 255, 0.08),
+        0 0 14px rgba(47, 125, 255, 0.65);
+}
+
+.solutions-slider__heading h2 {
+    max-width: 720px;
+    margin: 0;
+
+    color: #f2f3f5;
+    font-size: clamp(2rem, 3.2vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.055em;
+}
+
+.solutions-slider__heading h2 span {
+    display: block;
+    margin-top: 5px;
+
+    color: #7f858e;
+    font-weight: 400;
+}
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.solutions-slider__controls {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.solutions-slider__button {
+    display: grid;
+    place-items: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 0;
+
+    color: #aeb3bb;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.solutions-slider__button:hover {
+    color: #ffffff;
+    background: rgba(47, 125, 255, 0.13);
+    border-color: rgba(47, 125, 255, 0.28);
+    transform: translateY(-3px);
+}
+
+.solutions-slider__button:disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none;
+}
+
+.solutions-slider__button svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* =====================================================
+   TRACK
+===================================================== */
+
+.solutions-slider__track {
+    display: flex;
+    gap: 18px;
+
+    padding:
+        8px max(28px, calc((100vw - 1500px) / 2 + 28px)) 22px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 28px;
+
+    cursor: grab;
+    user-select: none;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.solutions-slider__track::-webkit-scrollbar {
+    display: none;
+}
+
+.solutions-slider__track.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.solutions-slider__track:focus-visible {
+    outline: 1px solid rgba(47, 125, 255, 0.6);
+    outline-offset: 5px;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.solution-card {
+    position: relative;
+
+    display: flex;
+    flex: 0 0 clamp(310px, 29vw, 430px);
+    flex-direction: column;
+
+    min-height: 410px;
+    padding: 24px;
+
+    background:
+        linear-gradient(155deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012));
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    scroll-snap-align: start;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.solution-card::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -110px;
+
+    width: 240px;
+    height: 240px;
+
+    background: rgba(47, 125, 255, 0.12);
+    border-radius: 50%;
+
+    filter: blur(60px);
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+.solution-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 55%;
+    height: 1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #2f7dff,
+            transparent);
+
+    transition: left 0.7s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+
+    background:
+        linear-gradient(155deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(47, 125, 255, 0.025));
+
+    border-color: rgba(47, 125, 255, 0.23);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.solution-card:hover::before {
+    opacity: 1;
+}
+
+.solution-card:hover::after {
+    left: 145%;
+}
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.solution-card__top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.solution-card__number {
+    color: #565d67;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+}
+
+.solution-card__icon {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: #6da2ff;
+    background: rgba(47, 125, 255, 0.08);
+    border: 1px solid rgba(47, 125, 255, 0.16);
+    border-radius: 15px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.solution-card:hover .solution-card__icon {
+    color: #ffffff;
+    background: #2f7dff;
+    transform: rotate(-4deg) scale(1.05);
+}
+
+.solution-card__icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.solution-card__content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    padding-top: 70px;
+}
+
+.solution-card__category {
+    color: #5582c9;
+
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.solution-card__content h3 {
+    margin: 13px 0 0;
+
+    color: #eef0f3;
+
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.04em;
+}
+
+.solution-card__content p {
+    margin: 16px 0 0;
+
+    color: #7b818a;
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.solution-card__footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 30px;
+    padding-top: 18px;
+
+    color: #676e77;
+    border-top: 1px solid rgba(255, 255, 255, 0.065);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.solution-card__arrow {
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: #727984;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.solution-card:hover .solution-card__arrow {
+    color: #ffffff;
+    background: #2f7dff;
+    border-color: #2f7dff;
+    transform: rotate(45deg);
+}
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.solutions-slider__bottom {
+    display: grid;
+    grid-template-columns: auto minmax(160px, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+
+    padding: 0 28px;
+    margin-top: 20px;
+}
+
+.solutions-slider__bottom p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+
+    color: #555c65;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.solutions-slider__bottom p span {
+    color: #2f7dff;
+}
+
+.solutions-slider__progress {
+    position: relative;
+    height: 2px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+}
+
+.solutions-slider__progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            #2f7dff,
+            #74a8ff);
+
+    border-radius: inherit;
+
+    transform-origin: left center;
+    transition: width 0.25s ease;
+}
+
+.solutions-slider__counter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.7rem;
+}
+
+.solutions-slider__counter strong {
+    color: #d5d9df;
+    font-weight: 500;
+}
+
+.solutions-slider__counter span {
+    color: #4e555f;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 700px) {
+    .solutions-slider {
+        padding: 80px 0 85px;
+    }
+
+    .solutions-slider__header {
+        align-items: flex-start;
+        padding: 0 18px;
+        margin-bottom: 30px;
+    }
+
+    .solutions-slider__heading h2 {
+        font-size: clamp(1.9rem, 9vw, 2.8rem);
+    }
+
+    .solutions-slider__controls {
+        display: none;
+    }
+
+    .solutions-slider__track {
+        gap: 14px;
+
+        padding:
+            6px 18px 20px;
+
+        scroll-padding-inline: 18px;
+    }
+
+    .solution-card {
+        flex-basis: min(84vw, 350px);
+        min-height: 390px;
+        padding: 21px;
+        border-radius: 20px;
+    }
+
+    .solution-card__content {
+        padding-top: 55px;
+    }
+
+    .solutions-slider__bottom {
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+
+        padding: 0 18px;
+        margin-top: 14px;
+    }
+
+    .solutions-slider__bottom p {
+        display: none;
+    }
+}

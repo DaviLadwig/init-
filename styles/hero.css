@@ -1,0 +1,918 @@
+/* =====================================================
+   HERO MINIMALISTA
+===================================================== */
+
+.hero-minimal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 155px 28px 80px;
+
+    color: #f4f4f5;
+    background:
+        linear-gradient(
+            180deg,
+            #050606 0%,
+            #080909 58%,
+            #050606 100%
+        );
+
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-minimal__container {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: minmax(380px, 0.86fr) minmax(560px, 1.14fr);
+    align-items: center;
+    gap: clamp(60px, 7vw, 120px);
+
+    width: min(1520px, 100%);
+    margin: 0 auto;
+}
+
+/* =====================================================
+   FUNDO TECNOLÓGICO
+===================================================== */
+
+.hero-minimal__background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-minimal__grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.022) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.022) 1px,
+            transparent 1px
+        );
+
+    background-size: 82px 82px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 5%,
+            #000 30%,
+            rgba(0, 0, 0, 0.65) 75%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 5%,
+            #000 30%,
+            rgba(0, 0, 0, 0.65) 75%,
+            transparent 100%
+        );
+}
+
+.hero-minimal__glow {
+    position: absolute;
+    top: 12%;
+    right: -8%;
+
+    width: 720px;
+    height: 720px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(44, 232, 137, 0.12) 0%,
+            rgba(44, 232, 137, 0.04) 38%,
+            transparent 70%
+        );
+
+    filter: blur(20px);
+}
+
+.hero-minimal__line {
+    position: absolute;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(54, 229, 141, 0.24),
+            transparent
+        );
+}
+
+.hero-minimal__line--one {
+    top: 32%;
+    right: -10%;
+    width: 52%;
+    transform: rotate(-18deg);
+}
+
+.hero-minimal__line--two {
+    right: -6%;
+    bottom: 25%;
+    width: 43%;
+    transform: rotate(14deg);
+}
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.hero-minimal__content {
+    max-width: 660px;
+}
+
+.hero-minimal__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    min-height: 36px;
+    margin-bottom: 25px;
+    padding: 0 14px;
+
+    color: #a7aaa9;
+    background: rgba(255, 255, 255, 0.032);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 999px;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.hero-minimal__status {
+    position: relative;
+    width: 7px;
+    height: 7px;
+
+    background: #3288f7;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(54, 229, 141, 0.08),
+        0 0 16px rgba(54, 144, 229, 0.75);
+}
+
+.hero-minimal__title {
+    max-width: 650px;
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-size: clamp(2.8rem, 4.2vw, 4.6rem);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+}
+
+.hero-minimal__title span {
+    display: block;
+    margin-top: 6px;
+
+    color: #929696;
+    font-weight: 400;
+}
+
+.hero-minimal__description {
+    max-width: 590px;
+    margin: 28px 0 0;
+
+    color: #8c9090;
+
+    font-size: clamp(0.98rem, 1.1vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.hero-minimal__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 34px;
+}
+
+.hero-minimal__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-height: 54px;
+    padding: 0 22px;
+
+    border-radius: 999px;
+    text-decoration: none;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-minimal__button--primary {
+    color: #050606;
+    background: #f4f4f4;
+    border: 1px solid #f4f4f4;
+}
+
+.hero-minimal__button--primary span {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    color: #f5f5f5;
+    background: #080909;
+    border-radius: 50%;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-minimal__button--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+.hero-minimal__button--primary:hover span {
+    color: #050606;
+    background: #3288f7;
+    transform: rotate(45deg);
+}
+
+.hero-minimal__button--secondary {
+    color: #c8caca;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.hero-minimal__button--secondary:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.17);
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   DETALHES
+===================================================== */
+
+.hero-minimal__details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+
+    margin-top: 42px;
+}
+
+.hero-minimal__detail {
+    position: relative;
+    min-width: 145px;
+    padding-right: 28px;
+}
+
+.hero-minimal__detail + .hero-minimal__detail {
+    padding-left: 28px;
+}
+
+.hero-minimal__detail + .hero-minimal__detail::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 0;
+
+    width: 1px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.hero-minimal__detail strong,
+.hero-minimal__detail span {
+    display: block;
+}
+
+.hero-minimal__detail strong {
+    color: #d9dada;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.hero-minimal__detail span {
+    margin-top: 6px;
+    color: #676b6b;
+    font-size: 0.67rem;
+}
+
+/* =====================================================
+   VISUAL DO SISTEMA
+===================================================== */
+
+.hero-minimal__visual {
+    position: relative;
+    min-width: 0;
+    padding: 1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.025) 45%,
+            rgba(54, 229, 141, 0.12)
+        );
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.42),
+        0 0 90px rgba(54, 229, 141, 0.025);
+}
+
+.hero-minimal__visual-border {
+    position: absolute;
+    inset: 1px;
+
+    background: #090b0b;
+    border-radius: 25px;
+}
+
+.hero-minimal__visual-header {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    min-height: 52px;
+    padding: 0 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.hero-minimal__visual-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-minimal__visual-dots span {
+    width: 6px;
+    height: 6px;
+
+    background: #3c4040;
+    border-radius: 50%;
+}
+
+.hero-minimal__visual-dots span:first-child {
+    background: #3288f7;
+    box-shadow: 0 0 12px rgba(50, 136, 247, 0.6);
+}
+
+.hero-minimal__visual-label {
+    color: #5e6262;
+    font-family: monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
+}
+
+.hero-minimal__visual-online {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+
+    color: #717575;
+    font-size: 0.62rem;
+}
+
+.hero-minimal__visual-online i {
+    width: 6px;
+    height: 6px;
+
+    background: #3288f7;
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px rgba(50, 136, 247, 0.75);
+}
+
+.hero-minimal__image-area {
+    position: relative;
+    z-index: 2;
+
+    min-height: 460px;
+    overflow: hidden;
+    border-radius: 0 0 25px 25px;
+}
+
+.hero-minimal__image-glow {
+    position: absolute;
+    top: 30%;
+    left: 52%;
+
+    width: 65%;
+    height: 55%;
+
+    background: rgba(54, 229, 141, 0.11);
+    border-radius: 50%;
+
+    filter: blur(85px);
+    transform: translate(-50%, -50%);
+}
+
+.hero-minimal__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    width: 116%;
+    max-width: none;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0.91)
+        contrast(1.08)
+        saturate(0.85);
+
+    transform: translate(-50%, -48%);
+    animation: minimalImageFloat 7s ease-in-out infinite;
+}
+
+.hero-minimal__scan {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 16%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(54, 229, 141, 0.055),
+            transparent
+        );
+
+    opacity: 0.8;
+    animation: minimalScan 7s linear infinite;
+}
+
+/* =====================================================
+   CARDS FLUTUANTES
+===================================================== */
+
+.hero-minimal__floating {
+    position: absolute;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 11px 14px;
+
+    background: rgba(11, 13, 13, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.hero-minimal__floating--top {
+    top: 22%;
+    right: -3%;
+    animation: minimalCardFloat 5s ease-in-out infinite;
+}
+
+.hero-minimal__floating--bottom {
+    bottom: 9%;
+    left: -4%;
+    animation: minimalCardFloat 5s -2.5s ease-in-out infinite;
+}
+
+.hero-minimal__floating strong,
+.hero-minimal__floating div > span {
+    display: block;
+}
+
+.hero-minimal__floating strong {
+    color: #dfe0e0;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.hero-minimal__floating div > span {
+    margin-top: 4px;
+    color: #686c6c;
+    font-size: 0.62rem;
+}
+
+.hero-minimal__floating-icon {
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: #3288f7;
+    background: rgba(50, 136, 247, 0.08);
+    border: 1px solid rgba(50, 136, 247, 0.17);
+    border-radius: 10px;
+}
+
+.hero-minimal__floating-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.hero-minimal__floating-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+
+    background: rgba(54, 144, 229, 0.08);
+    border: 1px solid rgba(54, 127, 229, 0.17);
+    border-radius: 10px;
+}
+
+.hero-minimal__floating-chart i {
+    display: block;
+    width: 3px;
+
+    background: #3288f7;
+    border-radius: 3px;
+}
+
+.hero-minimal__floating-chart i:nth-child(1) {
+    height: 35%;
+}
+
+.hero-minimal__floating-chart i:nth-child(2) {
+    height: 70%;
+}
+
+.hero-minimal__floating-chart i:nth-child(3) {
+    height: 52%;
+}
+
+.hero-minimal__floating-chart i:nth-child(4) {
+    height: 90%;
+}
+
+/* =====================================================
+   RODAPÉ DA HERO
+===================================================== */
+
+.hero-minimal__footer {
+    position: absolute;
+    right: 28px;
+    bottom: 24px;
+    left: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(1520px, calc(100% - 56px));
+    margin: 0 auto;
+
+    color: #56585a;
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-minimal__footer a {
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    color: #a7aaaa;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-minimal__footer a:hover {
+    color: #050606;
+    background: #3288f7 ;
+    transform: translateY(3px);
+}
+
+.hero-minimal__footer svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* =====================================================
+   ANIMAÇÃO DE ENTRADA
+===================================================== */
+
+.hero-enter {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: minimalHeroEnter 0.8s forwards;
+}
+
+.hero-enter--1 {
+    animation-delay: 0.12s;
+}
+
+.hero-enter--2 {
+    animation-delay: 0.24s;
+}
+
+.hero-enter--3 {
+    animation-delay: 0.36s;
+}
+
+.hero-enter--4 {
+    animation-delay: 0.48s;
+}
+
+.hero-enter--5 {
+    animation-delay: 0.6s;
+}
+
+.hero-enter--visual {
+    transform: translateX(35px) scale(0.98);
+    animation-name: minimalVisualEnter;
+    animation-delay: 0.3s;
+    animation-duration: 1s;
+}
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes minimalHeroEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes minimalVisualEnter {
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes minimalImageFloat {
+    0%,
+    100% {
+        transform: translate(-50%, -48%);
+    }
+
+    50% {
+        transform: translate(-50%, -51%);
+    }
+}
+
+@keyframes minimalCardFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes minimalScan {
+    from {
+        top: -20%;
+    }
+
+    to {
+        top: 110%;
+    }
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1200px) {
+    .hero-minimal__container {
+        grid-template-columns: minmax(360px, 0.9fr) minmax(500px, 1.1fr);
+        gap: 50px;
+    }
+
+    .hero-minimal__image-area {
+        min-height: 410px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero-minimal {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 105px;
+    }
+
+    .hero-minimal__container {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+    .hero-minimal__content {
+        max-width: 760px;
+    }
+
+    .hero-minimal__title {
+        max-width: 720px;
+    }
+
+    .hero-minimal__visual {
+        width: min(100%, 850px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-minimal {
+        padding:
+            118px
+            18px
+            90px;
+    }
+
+    .hero-minimal__container {
+        gap: 48px;
+    }
+
+    .hero-minimal__eyebrow {
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 0 12px;
+
+        font-size: 0.57rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-minimal__title {
+        font-size: clamp(2.45rem, 11vw, 3.6rem);
+        line-height: 1.04;
+    }
+
+    .hero-minimal__description {
+        margin-top: 22px;
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .hero-minimal__actions {
+        align-items: stretch;
+        flex-direction: column;
+        margin-top: 28px;
+    }
+
+    .hero-minimal__button {
+        width: 100%;
+    }
+
+    .hero-minimal__button--primary {
+        justify-content: space-between;
+    }
+
+    .hero-minimal__details {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+        margin-top: 32px;
+    }
+
+    .hero-minimal__detail,
+    .hero-minimal__detail + .hero-minimal__detail {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-minimal__detail + .hero-minimal__detail::before {
+        display: none;
+    }
+
+    .hero-minimal__image-area {
+        min-height: 320px;
+    }
+
+    .hero-minimal__image {
+        width: 145%;
+    }
+
+    .hero-minimal__visual-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .hero-minimal__visual-label {
+        display: none;
+    }
+
+    .hero-minimal__floating--top {
+        top: 18%;
+        right: -8px;
+    }
+
+    .hero-minimal__floating--bottom {
+        bottom: 7%;
+        left: -8px;
+    }
+
+    .hero-minimal__footer {
+        right: 18px;
+        left: 18px;
+        width: calc(100% - 36px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-minimal__image-area {
+        min-height: 285px;
+    }
+
+    .hero-minimal__floating--top {
+        display: none;
+    }
+
+    .hero-minimal__floating--bottom {
+        left: 10px;
+    }
+
+    .hero-minimal__footer span {
+        display: none;
+    }
+
+    .hero-minimal__footer {
+        justify-content: flex-end;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-enter,
+    .hero-enter--visual {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .hero-minimal__image,
+    .hero-minimal__scan,
+    .hero-minimal__floating {
+        animation: none;
+    }
+}
