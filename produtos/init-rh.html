@@ -1,505 +1,1085 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Init RH — Sistema de gestão de Recursos Humanos e Departamento Pessoal."
-    >
+    <meta name="description" content="Init RH — Sistema para gestão de Recursos Humanos e Departamento Pessoal.">
 
     <title>Init RH | Gestão de Pessoas</title>
 
-    <link
-        rel="stylesheet"
-        href="../assets/css/init-rh.css"
-    >
+    <link rel="stylesheet" href="../assets/css/init-rh.css">
 
-    <script
-        src="../assets/js/init-rh.js"
-        defer
-    ></script>
+    <script src="../assets/js/init-rh.js" defer></script>
 </head>
 
-<body class="rh-page">
+<body>
 
-    <!-- =================================================
-         ENTRADA ANIMADA
-    ================================================== -->
-    <div
-        class="rh-intro"
-        id="rhIntro"
-        aria-hidden="true"
-    >
-        <div class="rh-intro__panel rh-intro__panel--top"></div>
-        <div class="rh-intro__panel rh-intro__panel--bottom"></div>
+    <!-- =====================================================
+         ENTRADA RÁPIDA
+    ====================================================== -->
+    <div class="rh-loader" id="rhLoader" aria-hidden="true">
+        <div class="rh-loader__content">
+            <img src="../assets/img/init-rh-logo-intro.png" alt="">
 
-        <div class="rh-intro__noise"></div>
-
-        <div class="rh-intro__header">
-            <span>Init Sistemas</span>
-            <span>Produto digital</span>
+            <span class="rh-loader__line">
+                <i></i>
+            </span>
         </div>
-
-        <div class="rh-intro__steps">
-            <div class="rh-intro__step rh-intro__step--one">
-                <span>01</span>
-                <strong>Pessoas</strong>
-            </div>
-
-            <div class="rh-intro__step rh-intro__step--two">
-                <span>02</span>
-                <strong>Processos</strong>
-            </div>
-
-            <div class="rh-intro__step rh-intro__step--three">
-                <span>03</span>
-                <strong>Evolução</strong>
-            </div>
-        </div>
-
-        <div class="rh-intro__brand">
-            <img
-                src="../assets/img/init-rh/logo-init-rh.png"
-                alt=""
-            >
-
-            <p>
-                Recursos Humanos e Departamento Pessoal
-            </p>
-        </div>
-
-        <div class="rh-intro__progress">
-            <span></span>
-        </div>
-
-        <span class="rh-intro__counter">
-            Carregando experiência
-        </span>
     </div>
-
-    <!-- =================================================
-         HEADER
-    ================================================== -->
-    <header class="rh-header" id="rhHeader">
-        <div class="rh-header__shell">
-
-            <a
-                href="../index.html"
-                class="rh-header__brand"
-                aria-label="Voltar para o site da Init Sistemas"
-            >
-                <img
-                    src="../assets/img/init-rh/logo-init-rh.png"
-                    alt="Init RH"
-                >
-            </a>
-
-            <div class="rh-header__product">
-                <span>Produto</span>
-                <strong>Init Sistemas</strong>
-            </div>
-
-            <nav
-                class="rh-header__nav"
-                aria-label="Navegação principal"
-            >
-                <a href="#inicio" class="active">
-                    Início
-                </a>
-
-                <a href="#funcionalidades">
-                    Funcionalidades
-                </a>
-
-                <a href="#beneficios">
-                    Benefícios
-                </a>
-            </nav>
-
-            <a
-                href="#contato"
-                class="rh-header__contact"
-            >
-                <span>Solicitar demonstração</span>
-
-                <i aria-hidden="true">
-                    ↗
-                </i>
-            </a>
-
-        </div>
-    </header>
-
-    <!-- =================================================
-         CONTEÚDO PRINCIPAL
-    ================================================== -->
     <main>
 
-        <!-- =============================================
-             HERO
-        ============================================== -->
-        <section class="rh-hero" id="inicio">
+        <!-- =====================================================
+     ABERTURA COMERCIAL
+====================================================== -->
+        <section class="rh-opening" id="inicio">
 
-            <div class="rh-hero__background" aria-hidden="true">
-                <span class="rh-hero__spotlight"></span>
-                <span class="rh-hero__grid"></span>
-                <span class="rh-hero__line rh-hero__line--one"></span>
-                <span class="rh-hero__line rh-hero__line--two"></span>
-            </div>
+            <!-- HEADER INTEGRADO -->
+            <header class="rh-topbar">
+                <div class="rh-topbar__container">
 
-            <div class="rh-hero__container">
+                    <a href="#inicio" class="rh-topbar__brand" aria-label="Init RH - Página inicial">
+                        <img src="../assets/img/init-rh-logo-header.png" alt="Init RH">
+                    </a>
 
-                <!-- CONTEÚDO -->
-                <div class="rh-hero__content">
+                    <nav class="rh-topbar__nav" id="rhNavigation" aria-label="Navegação principal">
+                        <a href="#inicio" class="active">Início</a>
+                        <a href="#solucao">A solução</a>
+                        <a href="#funcionalidades">Funcionalidades</a>
+                        <a href="#beneficios">Benefícios</a>
+                        <a href="#contato">Contato</a>
+                    </nav>
 
-                    <div class="rh-hero__eyebrow">
-                        <span></span>
+                    <div class="rh-topbar__actions">
+                        <a href="#acesso" class="rh-topbar__login">
+                            Área do cliente
+                        </a>
 
-                        Gestão de Recursos Humanos e Departamento Pessoal
+                        <a href="#contato" class="rh-topbar__contact">
+                            Entrar em contato
+                        </a>
+
+                        <button type="button" class="rh-menu-toggle" id="rhMenuToggle" aria-label="Abrir menu"
+                            aria-expanded="false" aria-controls="rhNavigation">
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
 
-                    <h1 class="rh-hero__title">
-                        Gestão de pessoas
+                </div>
+            </header>
 
-                        <span>
-                            com mais clareza, organização e controle.
+            <!-- HERO -->
+            <div class="rh-opening__hero">
+                <div class="rh-opening__container">
+
+                    <!-- TEXTO -->
+                    <div class="rh-opening__content">
+
+                        <span class="rh-opening__eyebrow">
+                            Gestão de Recursos Humanos e Departamento Pessoal
                         </span>
-                    </h1>
 
-                    <p class="rh-hero__description">
-                        O Init RH centraliza colaboradores, setores, cargos,
-                        vínculos e rotinas internas para transformar processos
-                        manuais em uma gestão mais simples, segura e eficiente.
-                    </p>
+                        <h1>
+                            Você cuida das pessoas.
+                            <span>O Init RH organiza o processo.</span>
+                        </h1>
 
-                    <div class="rh-hero__actions">
-                        <a
-                            href="#contato"
-                            class="rh-button rh-button--primary"
-                        >
-                            <span>Solicitar demonstração</span>
+                        <p>
+                            Centralize colaboradores, setores, cargos, funções,
+                            vínculos e rotinas internas em uma plataforma simples,
+                            segura e preparada para evoluir com sua organização.
+                        </p>
 
-                            <i aria-hidden="true">
-                                ↗
-                            </i>
-                        </a>
+                        <div class="rh-opening__actions">
+                            <a href="#contato" class="rh-opening__button rh-opening__button--primary">
+                                Solicitar demonstração
 
-                        <a
-                            href="#funcionalidades"
-                            class="rh-button rh-button--secondary"
-                        >
-                            Conhecer funcionalidades
-                        </a>
-                    </div>
+                                <span aria-hidden="true">→</span>
+                            </a>
 
-                    <div class="rh-hero__meta">
-                        <div class="rh-hero__meta-item">
-                            <span class="rh-hero__meta-dot"></span>
+                            <a href="#funcionalidades" class="rh-opening__button rh-opening__button--secondary">
+                                Conhecer o sistema
+                            </a>
+                        </div>
 
-                            <div>
-                                <strong>Produto em evolução</strong>
-                                <small>Desenvolvimento contínuo</small>
+                        <!-- CONTATOS -->
+                        <div class="rh-opening__contacts">
+                            <span>Fale com a Init</span>
+
+                            <div class="rh-opening__socials">
+
+                                <a href="https://wa.me/5598981473574" target="_blank" rel="noopener noreferrer"
+                                    aria-label="WhatsApp">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 11.5C20 16.2 16.2 20 11.5 20C10.1 20 8.8 19.7 7.7 19.1L4 20L4.9 16.4C4.3 15.2 4 13.9 4 12.5C4 7.8 7.8 4 12.5 4C16.7 4 20 7.3 20 11.5Z"
+                                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+
+                                        <path d="M9 9C9.5 11.6 11.4 13.5 14 14" stroke="currentColor" stroke-width="1.7"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </a>
+
+                                <a href="#" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor"
+                                            stroke-width="1.7" />
+
+                                        <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.7" />
+
+                                        <circle cx="17" cy="7" r="1" fill="currentColor" />
+                                    </svg>
+                                </a>
+
+                                <a href="#" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 10V17" stroke="currentColor" stroke-width="1.8"
+                                            stroke-linecap="round" />
+
+                                        <path d="M11 17V13.5C11 11.5 12.2 10 14.2 10C16.2 10 17 11.4 17 13.5V17"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+
+                                        <circle cx="7" cy="7" r="1" fill="currentColor" />
+                                    </svg>
+                                </a>
+
+                                <a href="mailto:daviladwigdev@gmail.com" aria-label="E-mail">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor"
+                                            stroke-width="1.7" />
+
+                                        <path d="M5 8L12 13L19 8" stroke="currentColor" stroke-width="1.7"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+
                             </div>
                         </div>
 
-                        <div class="rh-hero__meta-item">
-                            <span class="rh-hero__meta-number">
-                                RH
-                            </span>
-
-                            <div>
-                                <strong>Gestão centralizada</strong>
-                                <small>Pessoas, cargos e processos</small>
-                            </div>
-                        </div>
                     </div>
 
-                </div>
+                    <!-- MARCA -->
+                    <div class="rh-opening__identity">
+                        <span class="rh-opening__identity-label">
+                            Um produto Init Sistemas
+                        </span>
 
-                <!-- IDENTIDADE DO PRODUTO -->
-                <div class="rh-hero__visual" id="rhHeroVisual">
+                        <img src="../assets/img/hero-image.png" alt="Init RH">
 
-                    <div class="rh-hero__orbit" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <div class="rh-brand-card">
-
-                        <div class="rh-brand-card__top">
-                            <span class="rh-brand-card__product">
-                                Produto Init
-                            </span>
-
-                            <span class="rh-brand-card__status">
-                                <i></i>
-                                Ativo
-                            </span>
-                        </div>
-
-                        <div class="rh-brand-card__logo">
-                            <span
-                                class="rh-brand-card__glow"
-                                aria-hidden="true"
-                            ></span>
-
-                            <img
-                                src="../assets/img/init-rh/logo-init-rh.png"
-                                alt="Init RH"
-                            >
-                        </div>
-
-                        <div class="rh-brand-card__description">
-                            <span>
-                                Recursos Humanos
-                            </span>
-
+                        <div class="rh-opening__identity-footer">
+                            <span>Recursos Humanos</span>
                             <i></i>
-
-                            <span>
-                                Departamento Pessoal
-                            </span>
-                        </div>
-
-                        <!-- REDES E CONTATO -->
-                        <div class="rh-socials">
-
-                            <!-- WHATSAPP -->
-                            <a
-                                href="https://wa.me/5598981473574"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="rh-social"
-                                aria-label="Conversar pelo WhatsApp"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M20 11.5C20 16.2 16.2 20 11.5 20C10.1 20 8.8 19.7 7.7 19.1L4 20L4.9 16.4C4.3 15.2 4 13.9 4 12.5C4 7.8 7.8 4 12.5 4C16.7 4 20 7.3 20 11.5Z"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-
-                                    <path
-                                        d="M9 9C9.4 11.7 11.3 13.6 14 14"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                        stroke-linecap="round"
-                                    />
-                                </svg>
-
-                                <span class="rh-social__tooltip">
-                                    WhatsApp
-                                </span>
-                            </a>
-
-                            <!-- INSTAGRAM -->
-                            <a
-                                href="https://instagram.com/SEU_USUARIO"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="rh-social"
-                                aria-label="Visitar Instagram"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect
-                                        x="4"
-                                        y="4"
-                                        width="16"
-                                        height="16"
-                                        rx="5"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                    />
-
-                                    <circle
-                                        cx="12"
-                                        cy="12"
-                                        r="3.5"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                    />
-
-                                    <circle
-                                        cx="17"
-                                        cy="7"
-                                        r="1"
-                                        fill="currentColor"
-                                    />
-                                </svg>
-
-                                <span class="rh-social__tooltip">
-                                    Instagram
-                                </span>
-                            </a>
-
-                            <!-- LINKEDIN -->
-                            <a
-                                href="https://linkedin.com/company/SEU_PERFIL"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="rh-social"
-                                aria-label="Visitar LinkedIn"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M7 10V17"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"
-                                    />
-
-                                    <path
-                                        d="M11 17V13.5C11 11.6 12.2 10 14.2 10C16.2 10 17 11.4 17 13.5V17"
-                                        stroke="currentColor"
-                                        stroke-width="1.8"
-                                        stroke-linecap="round"
-                                    />
-
-                                    <circle
-                                        cx="7"
-                                        cy="7"
-                                        r="1"
-                                        fill="currentColor"
-                                    />
-                                </svg>
-
-                                <span class="rh-social__tooltip">
-                                    LinkedIn
-                                </span>
-                            </a>
-
-                            <!-- E-MAIL -->
-                            <a
-                                href="mailto:daviladwigdev@gmail.com"
-                                class="rh-social"
-                                aria-label="Enviar e-mail"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect
-                                        x="4"
-                                        y="6"
-                                        width="16"
-                                        height="12"
-                                        rx="2"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                    />
-
-                                    <path
-                                        d="M5 8L12 13L19 8"
-                                        stroke="currentColor"
-                                        stroke-width="1.6"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-
-                                <span class="rh-social__tooltip">
-                                    E-mail
-                                </span>
-                            </a>
-
-                        </div>
-
-                        <div class="rh-brand-card__footer">
-                            <span>
-                                Gestão que acompanha sua organização
-                            </span>
-
-                            <strong>
-                                init.systems / rh
-                            </strong>
-                        </div>
-
-                    </div>
-
-                    <!-- ELEMENTOS FLUTUANTES -->
-                    <div class="rh-float-card rh-float-card--top">
-                        <span>01</span>
-
-                        <div>
-                            <strong>Pessoas</strong>
-                            <small>Informações centralizadas</small>
-                        </div>
-                    </div>
-
-                    <div class="rh-float-card rh-float-card--bottom">
-                        <span>02</span>
-
-                        <div>
-                            <strong>Processos</strong>
-                            <small>Rotinas organizadas</small>
+                            <span>Departamento Pessoal</span>
                         </div>
                     </div>
 
                 </div>
-
             </div>
 
-            <!-- FAIXA INFERIOR -->
-            <div class="rh-hero__footer">
-                <div class="rh-hero__footer-track">
+            <!-- LINHA INFERIOR -->
+            <div class="rh-opening__bottom">
+                <div>
                     <span>Colaboradores</span>
                     <i></i>
-
                     <span>Setores</span>
                     <i></i>
-
                     <span>Cargos</span>
                     <i></i>
-
                     <span>Funções</span>
                     <i></i>
-
                     <span>Vínculos</span>
                     <i></i>
-
                     <span>Permissões</span>
-                    <i></i>
-
-                    <span>Histórico</span>
                 </div>
 
-                <a
-                    href="#funcionalidades"
-                    class="rh-hero__scroll"
-                    aria-label="Continuar para as funcionalidades"
-                >
-                    <span>Explorar</span>
-                    <i>↓</i>
+                <a href="#video-init-rh">
+                    Conhecer o Init RH
+                    <span>↓</span>
                 </a>
             </div>
 
         </section>
 
-        <!-- As próximas seções serão adicionadas aqui. -->
+        <!-- =====================================================
+     VÍDEO DE APRESENTAÇÃO
+====================================================== -->
+        <section class="rh-video-showcase" id="video-init-rh">
+            <div class="rh-video-showcase__container">
+
+                <div class="rh-video-card rh-reveal">
+
+                    <div class="rh-video-card__header">
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <small>
+                            Apresentação do Init RH
+                        </small>
+
+                        <strong>
+                            Produto Init Sistemas
+                        </strong>
+                    </div>
+
+                    <div class="rh-video-card__media" id="rhVideoContainer">
+                        <video id="rhPresentationVideo" preload="metadata" playsinline controls
+                            controlslist="nodownload" poster="../assets/img/init-rh/capa-video-init-rh.jpg">
+                            <source src="../assets/video/apresentacao-init-rh.mp4" type="video/mp4">
+
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+
+                        <button type="button" class="rh-video-card__play" id="rhVideoPlay"
+                            aria-label="Reproduzir vídeo de apresentação">
+                            <span aria-hidden="true">
+                                ▶
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="rh-video-card__footer">
+                        <div>
+                            <span>Conheça a plataforma</span>
+
+                            <strong>
+                                Veja como o Init RH organiza pessoas e processos.
+                            </strong>
+                        </div>
+
+                        <small>
+                            Apresentação institucional
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     A SOLUÇÃO
+====================================================== -->
+        <section class="rh-solution" id="solucao">
+            <div class="rh-section-container">
+
+                <header class="rh-section-header rh-reveal">
+                    <div>
+                        <span class="rh-section-eyebrow">
+                            <i></i>
+                            A solução
+                        </span>
+
+                        <h2>
+                            Uma gestão mais simples para uma rotina
+                            <span>que exige organização e clareza.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        O Init RH reúne informações de colaboradores, estrutura
+                        organizacional, vínculos e acessos em um único ambiente,
+                        reduzindo controles paralelos e processos manuais.
+                    </p>
+                </header>
+
+                <div class="rh-solution__grid">
+
+                    <!-- DESTAQUE -->
+                    <article class="rh-solution__statement rh-reveal">
+                        <div class="rh-solution__statement-top">
+                            <span>Init RH</span>
+
+                            <strong>
+                                Gestão de pessoas
+                            </strong>
+                        </div>
+
+                        <blockquote>
+                            Menos informações espalhadas.
+                            <span>Mais controle para o RH.</span>
+                        </blockquote>
+
+                        <p>
+                            A plataforma foi pensada para transformar uma rotina
+                            composta por planilhas, documentos e controles isolados
+                            em uma operação centralizada e fácil de acompanhar.
+                        </p>
+
+                        <div class="rh-solution__statement-footer">
+                            <span>
+                                Organização
+                            </span>
+
+                            <span>
+                                Segurança
+                            </span>
+
+                            <span>
+                                Rastreabilidade
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- PROBLEMAS RESOLVIDOS -->
+                    <div class="rh-solution__items rh-reveal">
+
+                        <article class="rh-solution-item">
+                            <span class="rh-solution-item__number">
+                                01
+                            </span>
+
+                            <div>
+                                <h3>Informações espalhadas</h3>
+
+                                <p>
+                                    Cadastros, documentos e históricos passam a ficar
+                                    concentrados em um único ambiente.
+                                </p>
+                            </div>
+
+                            <span class="rh-solution-item__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="14" height="14" rx="3" stroke="currentColor"
+                                        stroke-width="1.7" />
+
+                                    <path d="M8 9H16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+
+                                    <path d="M8 13H14" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </article>
+
+                        <article class="rh-solution-item">
+                            <span class="rh-solution-item__number">
+                                02
+                            </span>
+
+                            <div>
+                                <h3>Processos manuais</h3>
+
+                                <p>
+                                    Rotinas repetitivas podem ser organizadas em fluxos
+                                    claros e padronizados.
+                                </p>
+                            </div>
+
+                            <span class="rh-solution-item__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 7H17V17H7V7Z" stroke="currentColor" stroke-width="1.7" />
+
+                                    <path d="M4 10V4H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+
+                                    <path d="M20 14V20H14" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </article>
+
+                        <article class="rh-solution-item">
+                            <span class="rh-solution-item__number">
+                                03
+                            </span>
+
+                            <div>
+                                <h3>Pouca visibilidade</h3>
+
+                                <p>
+                                    Gestores passam a contar com dados mais claros para
+                                    acompanhar pessoas e decisões internas.
+                                </p>
+                            </div>
+
+                            <span class="rh-solution-item__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 17V12" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M10 17V8" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M15 17V10" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M20 17V5" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     FUNCIONALIDADES
+====================================================== -->
+        <section class="rh-features" id="funcionalidades">
+            <div class="rh-section-container">
+
+                <header class="rh-section-header rh-reveal">
+                    <div>
+                        <span class="rh-section-eyebrow">
+                            <i></i>
+                            Funcionalidades
+                        </span>
+
+                        <h2>
+                            Os recursos essenciais para
+                            <span>organizar a gestão de pessoas.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Módulos conectados para manter a estrutura da organização
+                        atualizada, segura e acessível para quem realmente precisa.
+                    </p>
+                </header>
+
+                <div class="rh-features__grid">
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.7" />
+
+                                    <path d="M6 19C6.5 15.7 8.7 14 12 14C15.3 14 17.5 15.7 18 19" stroke="currentColor"
+                                        stroke-width="1.7" stroke-linecap="round" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                01
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Pessoas
+                        </span>
+
+                        <h3>Cadastro de colaboradores</h3>
+
+                        <p>
+                            Centralize dados pessoais, profissionais, documentos,
+                            contatos e informações importantes de cada colaborador.
+                        </p>
+                    </article>
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                        stroke-width="1.7" />
+
+                                    <rect x="13" y="5" width="6" height="6" rx="1.5" stroke="currentColor"
+                                        stroke-width="1.7" />
+
+                                    <rect x="9" y="13" width="6" height="6" rx="1.5" stroke="currentColor"
+                                        stroke-width="1.7" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                02
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Estrutura
+                        </span>
+
+                        <h3>Setores e departamentos</h3>
+
+                        <p>
+                            Organize a estrutura interna e identifique onde cada
+                            colaborador está vinculado.
+                        </p>
+                    </article>
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 6H17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+
+                                    <path d="M7 12H17" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M7 18H13" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                03
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Organização
+                        </span>
+
+                        <h3>Cargos e funções</h3>
+
+                        <p>
+                            Mantenha cargos e funções separados, organizados e
+                            disponíveis para os cadastros da equipe.
+                        </p>
+                    </article>
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 4H15L19 8V20H7V4Z" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linejoin="round" />
+
+                                    <path d="M15 4V8H19" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linejoin="round" />
+
+                                    <path d="M10 13H16" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                04
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Contratos
+                        </span>
+
+                        <h3>Tipos de vínculo</h3>
+
+                        <p>
+                            Cadastre vínculos efetivos, temporários, terceirizados,
+                            comissionados e outras modalidades.
+                        </p>
+                    </article>
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4L18 7V11C18 15 15.5 18 12 20C8.5 18 6 15 6 11V7L12 4Z"
+                                        stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+
+                                    <path d="M9.5 12L11.2 13.7L14.8 10" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                05
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Segurança
+                        </span>
+
+                        <h3>Perfis e permissões</h3>
+
+                        <p>
+                            Defina quais áreas e ações podem ser acessadas por cada
+                            tipo de usuário.
+                        </p>
+                    </article>
+
+                    <article class="rh-feature-card rh-reveal">
+                        <div class="rh-feature-card__top">
+                            <span class="rh-feature-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 17V12" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M10 17V7" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M15 17V10" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+
+                                    <path d="M20 17V5" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </span>
+
+                            <span class="rh-feature-card__number">
+                                06
+                            </span>
+                        </div>
+
+                        <span class="rh-feature-card__category">
+                            Gestão
+                        </span>
+
+                        <h3>Históricos e indicadores</h3>
+
+                        <p>
+                            Consulte movimentações e informações consolidadas para
+                            acompanhar a evolução da organização.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     VISÃO DO SISTEMA
+====================================================== -->
+        <section class="rh-product-view">
+            <div class="rh-section-container">
+
+                <div class="rh-product-view__grid">
+
+                    <div class="rh-product-view__content rh-reveal">
+                        <span class="rh-section-eyebrow rh-section-eyebrow--light">
+                            <i></i>
+                            Um ambiente único
+                        </span>
+
+                        <h2>
+                            Uma visão clara da estrutura
+                            <span>e das pessoas da organização.</span>
+                        </h2>
+
+                        <p>
+                            O dashboard reúne os principais números e atalhos para que
+                            o RH encontre informações importantes sem depender de
+                            diferentes arquivos ou controles paralelos.
+                        </p>
+
+                        <div class="rh-product-view__list">
+                            <article>
+                                <span>01</span>
+
+                                <div>
+                                    <strong>Informações atualizadas</strong>
+                                    <small>
+                                        Dados disponíveis para consulta de forma rápida.
+                                    </small>
+                                </div>
+                            </article>
+
+                            <article>
+                                <span>02</span>
+
+                                <div>
+                                    <strong>Navegação simples</strong>
+                                    <small>
+                                        Módulos organizados para facilitar a rotina.
+                                    </small>
+                                </div>
+                            </article>
+
+                            <article>
+                                <span>03</span>
+
+                                <div>
+                                    <strong>Acesso controlado</strong>
+                                    <small>
+                                        Cada usuário visualiza apenas o que precisa.
+                                    </small>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="rh-product-view__visual rh-reveal">
+                        <div class="rh-product-window">
+                            <header class="rh-product-window__header">
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <small>
+                                    Init RH · Painel administrativo
+                                </small>
+
+                                <strong>
+                                    Online
+                                </strong>
+                            </header>
+
+                            <div class="rh-product-window__image">
+                                <img src="../assets/img/init-rh/dashboard-init-rh.png"
+                                    alt="Painel administrativo do Init RH" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     BENEFÍCIOS
+====================================================== -->
+        <section class="rh-benefits" id="beneficios">
+            <div class="rh-section-container">
+
+                <header class="rh-section-header rh-reveal">
+                    <div>
+                        <span class="rh-section-eyebrow">
+                            <i></i>
+                            Benefícios
+                        </span>
+
+                        <h2>
+                            Mais organização para o RH.
+                            <span>Mais clareza para a gestão.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        O Init RH melhora a forma como informações e processos internos
+                        são registrados, consultados e acompanhados.
+                    </p>
+                </header>
+
+                <div class="rh-benefits__grid">
+
+                    <article class="rh-benefit-card rh-reveal">
+                        <span class="rh-benefit-card__number">
+                            01
+                        </span>
+
+                        <h3>Redução de controles paralelos</h3>
+
+                        <p>
+                            Menos dependência de planilhas, documentos soltos e
+                            informações mantidas em diferentes locais.
+                        </p>
+                    </article>
+
+                    <article class="rh-benefit-card rh-reveal">
+                        <span class="rh-benefit-card__number">
+                            02
+                        </span>
+
+                        <h3>Mais segurança nos acessos</h3>
+
+                        <p>
+                            Perfis e permissões ajudam a proteger informações e limitar
+                            operações conforme cada responsabilidade.
+                        </p>
+                    </article>
+
+                    <article class="rh-benefit-card rh-reveal">
+                        <span class="rh-benefit-card__number">
+                            03
+                        </span>
+
+                        <h3>Dados mais confiáveis</h3>
+
+                        <p>
+                            Informações centralizadas diminuem duplicidades e facilitam
+                            a atualização dos registros.
+                        </p>
+                    </article>
+
+                    <article class="rh-benefit-card rh-reveal">
+                        <span class="rh-benefit-card__number">
+                            04
+                        </span>
+
+                        <h3>Estrutura preparada para evoluir</h3>
+
+                        <p>
+                            Novos módulos e recursos podem ser incorporados conforme a
+                            necessidade da organização.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="rh-audience rh-reveal">
+                    <div class="rh-audience__heading">
+                        <span>
+                            Para quem é o Init RH?
+                        </span>
+
+                        <strong>
+                            Organizações que precisam estruturar e profissionalizar a
+                            gestão de pessoas.
+                        </strong>
+                    </div>
+
+                    <div class="rh-audience__items">
+                        <span>Empresas privadas</span>
+                        <span>Instituições públicas</span>
+                        <span>Organizações sociais</span>
+                        <span>Equipes administrativas</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     IMPLANTAÇÃO
+====================================================== -->
+        <section class="rh-implementation">
+            <div class="rh-section-container">
+
+                <header class="rh-section-header rh-reveal">
+                    <div>
+                        <span class="rh-section-eyebrow">
+                            <i></i>
+                            Implantação
+                        </span>
+
+                        <h2>
+                            Uma implantação organizada,
+                            <span>do entendimento à utilização.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Cada projeto começa pelo entendimento da operação e avança de
+                        forma gradual, com configuração, validação e acompanhamento.
+                    </p>
+                </header>
+
+                <div class="rh-implementation__steps">
+
+                    <article class="rh-implementation-step rh-reveal">
+                        <span class="rh-implementation-step__number">
+                            01
+                        </span>
+
+                        <div class="rh-implementation-step__line"></div>
+
+                        <h3>Diagnóstico</h3>
+
+                        <p>
+                            Entendemos a estrutura, a rotina e as necessidades da
+                            organização.
+                        </p>
+                    </article>
+
+                    <article class="rh-implementation-step rh-reveal">
+                        <span class="rh-implementation-step__number">
+                            02
+                        </span>
+
+                        <div class="rh-implementation-step__line"></div>
+
+                        <h3>Configuração</h3>
+
+                        <p>
+                            Preparamos módulos, cadastros, perfis e regras de acesso.
+                        </p>
+                    </article>
+
+                    <article class="rh-implementation-step rh-reveal">
+                        <span class="rh-implementation-step__number">
+                            03
+                        </span>
+
+                        <div class="rh-implementation-step__line"></div>
+
+                        <h3>Validação</h3>
+
+                        <p>
+                            O ambiente é revisado antes da utilização oficial.
+                        </p>
+                    </article>
+
+                    <article class="rh-implementation-step rh-reveal">
+                        <span class="rh-implementation-step__number">
+                            04
+                        </span>
+
+                        <div class="rh-implementation-step__line"></div>
+
+                        <h3>Evolução</h3>
+
+                        <p>
+                            Acompanhamos o uso e planejamos melhorias futuras.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+     CONTATO
+====================================================== -->
+        <section class="rh-contact-section" id="contato">
+            <div class="rh-section-container">
+
+                <div class="rh-contact-section__card rh-reveal">
+
+                    <div class="rh-contact-section__content">
+                        <span class="rh-contact-section__eyebrow">
+                            Conheça o Init RH
+                        </span>
+
+                        <h2>
+                            Veja como o sistema pode
+                            <span>organizar a gestão da sua equipe.</span>
+                        </h2>
+
+                        <p>
+                            Entre em contato para apresentar a realidade da sua
+                            organização e conhecer uma demonstração do produto.
+                        </p>
+
+                        <div class="rh-contact-section__actions">
+                            <a href="https://wa.me/5598981473574" target="_blank" rel="noopener noreferrer"
+                                class="rh-contact-section__primary">
+                                Conversar pelo WhatsApp
+
+                                <span aria-hidden="true">
+                                    ↗
+                                </span>
+                            </a>
+
+                            <a href="mailto:daviladwigdev@gmail.com" class="rh-contact-section__secondary">
+                                Enviar um e-mail
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="rh-contact-section__information">
+                        <article>
+                            <span>01</span>
+
+                            <div>
+                                <small>Atendimento</small>
+                                <strong>Apresentação personalizada</strong>
+                            </div>
+                        </article>
+
+                        <article>
+                            <span>02</span>
+
+                            <div>
+                                <small>Produto</small>
+                                <strong>Adaptável à organização</strong>
+                            </div>
+                        </article>
+
+                        <article>
+                            <span>03</span>
+
+                            <div>
+                                <small>Evolução</small>
+                                <strong>Novos módulos e melhorias</strong>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="rh-client-access rh-reveal" id="acesso">
+                    <div>
+                        <span>Já utiliza o Init RH?</span>
+
+                        <strong>
+                            Acesse o ambiente da sua organização.
+                        </strong>
+                    </div>
+
+                    <a href="#" aria-label="Acessar o sistema Init RH">
+                        Área do cliente
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
+    <!-- =====================================================
+     FOOTER
+====================================================== -->
+    <footer class="rh-footer">
+        <div class="rh-footer__container">
+
+            <div class="rh-footer__main">
+
+                <div class="rh-footer__brand">
+                    <img src="../assets/img/init-rh-logo-laranja.png" alt="Init RH">
+
+                    <p>
+                        Sistema para gestão de Recursos Humanos e
+                        Departamento Pessoal.
+                    </p>
+                </div>
+
+                <nav class="rh-footer__navigation" aria-label="Navegação do rodapé">
+                    <span>Navegação</span>
+
+                    <a href="#inicio">Início</a>
+                    <a href="#solucao">A solução</a>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#beneficios">Benefícios</a>
+                </nav>
+
+                <div class="rh-footer__contact">
+                    <span>Contato</span>
+
+                    <a href="mailto:daviladwigdev@gmail.com">
+                        daviladwigdev@gmail.com
+                    </a>
+
+                    <a href="https://wa.me/5598981473574" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="rh-footer__company">
+                    <span>Desenvolvido por</span>
+
+                    <a href="../index.html">
+                        Init Sistemas
+                        <i aria-hidden="true">↗</i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="rh-footer__bottom">
+                <span>
+                    © <span id="rhCurrentYear"></span> Init Sistemas
+                </span>
+
+                <span>
+                    Init RH · Gestão de pessoas e processos
+                </span>
+            </div>
+
+        </div>
+    </footer>
+
 </body>
+
 </html>

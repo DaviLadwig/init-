@@ -1,35 +1,30 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("rhLoader");
     const header = document.getElementById("rhHeader");
-    const hero = document.querySelector(".rh-hero");
-    const visual = document.getElementById("rhHeroVisual");
-    const brandCard = document.querySelector(".rh-brand-card");
-    const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    );
+    const menuToggle = document.getElementById("rhMenuToggle");
+    const navigation = document.getElementById("rhNavigation");
+    const navigationLinks = navigation
+        ? navigation.querySelectorAll("a")
+        : [];
 
     /*
-     * Remove a entrada do documento depois que
-     * todas as animações forem concluídas.
+     * Entrada curta e comercial.
      */
-    const intro = document.getElementById("rhIntro");
+    window.setTimeout(() => {
+        loader?.classList.add("is-finished");
+    }, 1350);
 
-    if (intro) {
-        window.setTimeout(() => {
-            intro.remove();
-        }, 5600);
-    }
+    window.setTimeout(() => {
+        loader?.remove();
+    }, 2000);
 
     /*
-     * Header compacto ao rolar a página.
+     * Header ao rolar.
      */
     function updateHeader() {
-        if (!header) {
-            return;
-        }
-
-        header.classList.toggle(
+        header?.classList.toggle(
             "is-scrolled",
             window.scrollY > 24
         );
@@ -44,96 +39,46 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     /*
-     * Iluminação do hero seguindo o ponteiro.
+     * Menu mobile.
      */
-    function updateHeroSpotlight(event) {
-        if (!hero || reducedMotion.matches) {
-            return;
+    function closeMenu() {
+        menuToggle?.classList.remove("is-active");
+        navigation?.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+
+        menuToggle?.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+    }
+
+    menuToggle?.addEventListener("click", () => {
+        const menuIsOpen =
+            navigation?.classList.toggle("is-open") ?? false;
+
+        menuToggle.classList.toggle(
+            "is-active",
+            menuIsOpen
+        );
+
+        document.body.classList.toggle(
+            "menu-open",
+            menuIsOpen
+        );
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(menuIsOpen)
+        );
+    });
+
+    navigationLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 1150) {
+            closeMenu();
         }
-
-        const bounds = hero.getBoundingClientRect();
-
-        const x =
-            ((event.clientX - bounds.left) / bounds.width) * 100;
-
-        const y =
-            ((event.clientY - bounds.top) / bounds.height) * 100;
-
-        hero.style.setProperty(
-            "--rh-mouse-x",
-            `${x.toFixed(2)}%`
-        );
-
-        hero.style.setProperty(
-            "--rh-mouse-y",
-            `${y.toFixed(2)}%`
-        );
-    }
-
-    if (hero) {
-        hero.addEventListener(
-            "pointermove",
-            updateHeroSpotlight
-        );
-    }
-
-    /*
-     * Movimento tridimensional discreto no card da logo.
-     */
-    function moveBrandCard(event) {
-        if (
-            !visual ||
-            !brandCard ||
-            reducedMotion.matches ||
-            window.innerWidth <= 1100
-        ) {
-            return;
-        }
-
-        const bounds = visual.getBoundingClientRect();
-
-        const horizontal =
-            (event.clientX - bounds.left) / bounds.width - 0.5;
-
-        const vertical =
-            (event.clientY - bounds.top) / bounds.height - 0.5;
-
-        const rotateY = horizontal * 5;
-        const rotateX = vertical * -4;
-
-        brandCard.style.transform = `
-            perspective(1100px)
-            rotateX(${rotateX.toFixed(2)}deg)
-            rotateY(${rotateY.toFixed(2)}deg)
-        `;
-    }
-
-    function resetBrandCard() {
-        if (!brandCard) {
-            return;
-        }
-
-        brandCard.style.transform = "";
-    }
-
-    if (visual) {
-        visual.addEventListener(
-            "pointermove",
-            moveBrandCard
-        );
-
-        visual.addEventListener(
-            "pointerleave",
-            resetBrandCard
-        );
-    }
-
-    /*
-     * Remove o movimento caso o usuário altere
-     * a preferência de acessibilidade.
-     */
-    reducedMotion.addEventListener?.(
-        "change",
-        resetBrandCard
-    );
+    });
 });
